@@ -1,0 +1,8 @@
+﻿  main.cpp
+c:\users\mariansa\desktop\c++\dungeonexplorer\src\includes.h(8): warning C4005: 'WINDOW_W': macro redefinition
+  c:\users\mariansa\desktop\c++\dungeonexplorer\src\includes.h(7): note: see previous definition of 'WINDOW_W'
+  Generating code
+  All 1 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  DungeonExplorer.vcxproj -> C:\Users\Mariansa\Desktop\c++\DungeonExplorer\Release\DungeonExplorer.exe
+  DungeonExplorer.vcxproj -> C:\Users\Mariansa\Desktop\c++\DungeonExplorer\Release\DungeonExplorer.pdb (Full PDB)
