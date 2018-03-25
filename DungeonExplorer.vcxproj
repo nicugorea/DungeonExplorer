@@ -145,9 +145,15 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\core\InputManager.cpp" />
+    <ClCompile Include="src\core\ResourceManager.cpp" />
+    <ClCompile Include="src\core\Window.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\core\InputManager.h" />
+    <ClInclude Include="src\core\ResourceManager.h" />
+    <ClInclude Include="src\core\Window.h" />
     <ClInclude Include="src\includes.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
