@@ -6,6 +6,8 @@ BasicObject::BasicObject()
 {
 	mEntity.rectOnScreen = STD_RECT;
 	mEntity.rectOnTexture = STD_RECT;
+	mEntity.rectOnScreen.h /= 2;
+	mEntity.rectOnScreen.w /= 2;
 }
 
 

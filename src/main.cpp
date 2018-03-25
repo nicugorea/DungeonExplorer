@@ -4,23 +4,22 @@
 #include "core\ResourceManager.h"
 #include "core\InputManager.h"
 #include "game\BasicObject.h"
+#include "game\GameMap.h"
 
 
 
 int main(int argc, char** argv)
 {
 	Window window;
-	BasicObject obj;
-
-	obj.SetTexture( ResourceManager::GetTextureFromFile( "res/img/cell.png" ) );
+	GameMap map;
+	map.LoadFromFile( "res/map/map.txt" );
 
 	while(window.IsRunning())
 	{
 		InputManager::EventHandle();
 
 		ResourceManager::Clear();
-		obj.Draw();
-
+		map.DrawMap();
 		
 
 	
