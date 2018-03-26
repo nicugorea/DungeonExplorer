@@ -10,10 +10,14 @@ public:
 	~GameMap();
 
 	bool LoadFromFile( const char* _path );
-	void DrawMap();
+	SDL_Point GetPlayerPosition() { return mPlayerPos; }
+
+
+	void Draw();
 
 private:
 	int** mMap;
+	SDL_Point mPlayerPos;
 	SDL_Point mSize;
 	BasicObject mCell;
 	BasicObject mTreasure;

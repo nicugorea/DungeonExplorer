@@ -9,5 +9,7 @@ public:
 
 	static void EventHandle();
 
+	static bool IsKeyDown( SDL_Keycode _keycode );
+
 };
 

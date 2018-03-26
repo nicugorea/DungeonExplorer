@@ -29,5 +29,6 @@ typedef struct{
 
 #define BG_COLOR 27,3,199,255
 
+#define FPS 1000/60
 
 

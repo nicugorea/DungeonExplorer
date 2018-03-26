@@ -21,3 +21,8 @@ void InputManager::EventHandle()
 	
 
 }
+
+bool InputManager::IsKeyDown( SDL_Keycode _keycode )
+{
+	return SDL_GetKeyboardState( NULL )[_keycode];
+}

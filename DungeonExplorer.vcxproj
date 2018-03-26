@@ -149,7 +149,9 @@
     <ClCompile Include="src\core\ResourceManager.cpp" />
     <ClCompile Include="src\core\Window.cpp" />
     <ClCompile Include="src\game\BasicObject.cpp" />
+    <ClCompile Include="src\game\Game.cpp" />
     <ClCompile Include="src\game\GameMap.cpp" />
+    <ClCompile Include="src\game\Player.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -157,7 +159,9 @@
     <ClInclude Include="src\core\ResourceManager.h" />
     <ClInclude Include="src\core\Window.h" />
     <ClInclude Include="src\game\BasicObject.h" />
+    <ClInclude Include="src\game\Game.h" />
     <ClInclude Include="src\game\GameMap.h" />
+    <ClInclude Include="src\game\Player.h" />
     <ClInclude Include="src\includes.h" />
   </ItemGroup>
   <ItemGroup>

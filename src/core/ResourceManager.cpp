@@ -35,4 +35,9 @@ void ResourceManager::DrawEntity( Entity & _entity )
 	SDL_RenderCopy( Window::gRenderer, _entity.texture, &_entity.rectOnTexture, &_entity.rectOnScreen );
 }
 
+void ResourceManager::DrawEntityEx( Entity & _entity, double & _angle, SDL_Point& _center, SDL_RendererFlip _flip )
+{
+	SDL_RenderCopyEx( Window::gRenderer, _entity.texture, &_entity.rectOnTexture, &_entity.rectOnScreen, _angle, &_center, _flip );
+}
+
 

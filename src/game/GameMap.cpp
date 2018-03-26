@@ -49,6 +49,11 @@ bool GameMap::LoadFromFile( const char * _path )
 			if(tmp == 'M') id = -2;
 			if(tmp == 'T') id = -1;
 			if(tmp == 'A') id = 0;
+			if(tmp == 'P') {
+				id = 0;
+				mPlayerPos.x = j;
+				mPlayerPos.y = i;
+			}
 
 			mMap[i][j]=id;
 		}
@@ -61,7 +66,8 @@ bool GameMap::LoadFromFile( const char * _path )
 
 }
 
-void GameMap::DrawMap()
+
+void GameMap::Draw()
 {
 	for(int i = 0; i < mSize.y; i++)
 	{
