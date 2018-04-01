@@ -1,9 +1,8 @@
-﻿  Player.cpp
+﻿  Window.cpp
   Generating code
-c:\users\mariansa\desktop\c++\dungeonexplorer\src\game\game.cpp(36): warning C4700: uninitialized local variable 'delay' used
-  3 of 175 functions ( 1.7%) were compiled, the rest were copied from previous compilation.
-  Finished generating code
+  1 of 181 functions ( 0.6%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
     1 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
   DungeonExplorer.vcxproj -> C:\Users\Mariansa\Desktop\c++\DungeonExplorer\Release\DungeonExplorer.exe
   DungeonExplorer.vcxproj -> C:\Users\Mariansa\Desktop\c++\DungeonExplorer\Release\DungeonExplorer.pdb (Full PDB)

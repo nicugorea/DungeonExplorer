@@ -14,19 +14,14 @@ public:
 	SDL_Point GetPlayerPosition() { return mPlayerPos; }
 	SDL_Point GetMapSize() { return mSize; }
 	
-	int** GetMap() { return mMap; }
-	void UpdateMap( int**& _map )
-	{
-		for(int i = 0; i < mSize.y; i++)
-			for(int j = 0; j < mSize.x; j++)
-				mMap[i][j] = _map[i][j];
-	}
+	static int GetMapCell( SDL_Point _pos ) { return mMap[_pos.x][_pos.y]; }
+	static void ClearCell( SDL_Point _pos ) { mMap[_pos.x][_pos.y] = 0; }
 
 	void Draw();
 
 
 private:
-	int** mMap;
+	static int** mMap;
 	SDL_Point mPlayerPos;
 	SDL_Point mSize;
 	BasicObject mCell;

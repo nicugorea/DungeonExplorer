@@ -11,6 +11,8 @@ public:
 	void EventHandle();
 	void SetPosition(SDL_Point _point);
 	void SetMapSize( SDL_Point& _mapSize ) { mMapSize = _mapSize; }
+	
+	int GetScore() { return mScore; }
 
 	void Draw();
 
@@ -21,5 +23,6 @@ private:
 
 	SDL_Point mMapSize;
 
+	int mScore;
 };
 

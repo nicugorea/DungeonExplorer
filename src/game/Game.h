@@ -26,6 +26,7 @@ private:
 	bool mRunning;
 	GameMap mMap;
 	Player mPlayer;
+	BasicObject mScore;
 
 };
 

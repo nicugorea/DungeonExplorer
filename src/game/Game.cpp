@@ -17,6 +17,7 @@ void Game::Run()
 	mMap.LoadFromFile( "res/map/map.txt" );
 	mPlayer.SetPosition( mMap.GetPlayerPosition() );
 	mPlayer.SetMapSize( mMap.GetMapSize() );
+	mScore.SetPosition( { WINDOW_W - SCORE_W, SCORE_H } );
 
 	Uint32 lastFrame = SDL_GetTicks();
 	int delay;
@@ -25,10 +26,12 @@ void Game::Run()
 	{
 
 		EventHandle();
+		
 		ResourceManager::Clear();
+
 		mMap.Draw();
 		mPlayer.Draw();
-
+		mScore.Draw();
 
 		ResourceManager::Show();
 
@@ -45,5 +48,8 @@ void Game::EventHandle()
 {
 	InputManager::EventHandle();
 	mPlayer.EventHandle();
+	//mScore.SetTexture( ResourceManager::GetTextureFromFile( "res/img/player.png" ) );
+	mScore.SetTexture( ResourceManager::GetTextureFromFont( mPlayer.GetScore() ) );
+	mScore.SetSizeFromTexture();
 
 }

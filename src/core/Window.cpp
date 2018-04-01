@@ -6,7 +6,9 @@
 SDL_Window*		Window::gWindow = nullptr;
 SDL_Renderer*	Window::gRenderer = nullptr;
 SDL_Event*		Window::gEvent = nullptr;
+TTF_Font*		Window::gFont = nullptr;
 bool			Window::running = false;
+
 
 
 Window::Window()
@@ -16,7 +18,8 @@ Window::Window()
 
 
 Window::~Window()
-{
+{				   
+	TTF_CloseFont( gFont );
 	delete(gEvent);
 	TTF_Quit();
 	IMG_Quit();
@@ -64,6 +67,7 @@ bool Window::Init()
 		return false;
 	}
 
+	gFont = TTF_OpenFont( "res/font/font.ttf", 32 );
 
 	return true;
 }

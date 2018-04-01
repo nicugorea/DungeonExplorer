@@ -10,6 +10,8 @@ public:
 	static void Show();
 
 	static SDL_Texture* GetTextureFromFile( const char* _path );
+	static SDL_Texture* GetTextureFromFont( int _val );
+
 
 	static void DrawEntity( Entity& _entity );
 	static void DrawEntityEx( Entity& _entity, double& _angle, SDL_Point& _center, SDL_RendererFlip _flip );

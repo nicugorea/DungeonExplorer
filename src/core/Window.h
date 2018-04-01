@@ -14,6 +14,7 @@ public:
 	static SDL_Window	*gWindow;
 	static SDL_Renderer *gRenderer;
 	static SDL_Event	*gEvent;
+	static TTF_Font		*gFont;
 
 private:
 	bool Init();

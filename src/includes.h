@@ -10,7 +10,7 @@
 typedef struct{
 	SDL_Rect rectOnScreen;
 	SDL_Rect rectOnTexture;
-	SDL_Texture* texture;
+	SDL_Texture* texture=nullptr;
 
 }Entity;
 
@@ -24,6 +24,9 @@ typedef struct{
 #define LOGLN(info)  std::cout<<info<<'\n'
 
 #define SPEED 200
+
+#define SCORE_W 128
+#define SCORE_H 32
 
 #define STD_X 0
 #define STD_Y 0

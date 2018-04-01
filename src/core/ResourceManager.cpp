@@ -30,6 +30,17 @@ SDL_Texture * ResourceManager::GetTextureFromFile( const char * _path )
 	return tmpTexture;
 }
 
+SDL_Texture * ResourceManager::GetTextureFromFont( int  _val )
+{
+	char text[32];
+	itoa( _val, text, 10 );
+	SDL_Surface* tmpSurface = TTF_RenderText_Blended( Window::gFont, text, { 123,32,55 } );
+	SDL_Texture* tmpTexture = SDL_CreateTextureFromSurface( Window::gRenderer, tmpSurface );
+	SDL_FreeSurface( tmpSurface );
+
+	return tmpTexture;
+}
+
 void ResourceManager::DrawEntity( Entity & _entity )
 {
 	SDL_RenderCopy( Window::gRenderer, _entity.texture, &_entity.rectOnTexture, &_entity.rectOnScreen );

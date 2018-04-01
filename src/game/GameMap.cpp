@@ -1,7 +1,7 @@
 #include "GameMap.h"
 #include "../core/ResourceManager.h"
 
-
+int** GameMap::mMap=nullptr;
 
 GameMap::GameMap()
 {
@@ -65,6 +65,7 @@ bool GameMap::LoadFromFile( const char * _path )
 
 
 }
+
 
 
 void GameMap::Draw()
