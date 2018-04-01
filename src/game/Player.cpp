@@ -5,13 +5,10 @@
 
 Player::Player()
 {
-	mEntity.rectOnScreen = STD_RECT;
-	mEntity.rectOnScreen.w = STD_W;
-	mEntity.rectOnScreen.h = STD_H;
-	mEntity.rectOnTexture = STD_RECT;
 	mEntity.texture = ResourceManager::GetTextureFromFile( "res/img/player.png" );
 	mCenter.x = mEntity.rectOnScreen.x + mEntity.rectOnScreen.w / 2;
 	mCenter.y = mEntity.rectOnScreen.y + mEntity.rectOnScreen.h / 2;
+	mAngle = 0;
 }
 
 
@@ -21,32 +18,35 @@ Player::~Player()
 
 void Player::EventHandle()
 {
+	bool moved = true;
+
 	if(InputManager::IsKeyDown( SDL_SCANCODE_RIGHT ))
 		mAngle += 90;
-	if(InputManager::IsKeyDown( SDL_SCANCODE_LEFT ))
+	else if(InputManager::IsKeyDown( SDL_SCANCODE_LEFT ))
 		mAngle -= 90;
-
-	if(mAngle > 360) mAngle -= 360;
-	if(mAngle < -360) mAngle += 360;
-
-	if(InputManager::IsKeyDown( SDL_SCANCODE_UP ))
+	else if(InputManager::IsKeyDown( SDL_SCANCODE_UP ))
+	{
 		if(mAngle == 0)
-			mEntity.rectOnScreen.y -= STD_H;
-		else if(mAngle == 180 || mAngle == -180)
-			mEntity.rectOnScreen.y += STD_W;
-		else if(mAngle == 270 || mAngle == -90)
-			mEntity.rectOnScreen.x -= STD_W;
+			mEntity.rectOnScreen.y -= SCALED_H;
 		else if(mAngle == 90 || mAngle == -270)
-			mEntity.rectOnScreen.x += STD_H;
+			mEntity.rectOnScreen.x += SCALED_H;
+		else if(mAngle == 180 || mAngle == -180)
+			mEntity.rectOnScreen.y += SCALED_W;
+		else if(mAngle == 270 || mAngle == -90)
+			mEntity.rectOnScreen.x -= SCALED_W;
+	}
+	else moved = false;
 
+	if(mAngle == 360) mAngle =0;
+	if(mAngle == -360) mAngle =0;
 
-	SDL_Delay( 150 );
+	if(moved) SDL_Delay( SPEED );
 }
 
 void Player::SetPosition( SDL_Point _point )
 {
-	mEntity.rectOnScreen.x = _point.x*STD_W;
-	mEntity.rectOnScreen.y = _point.y*STD_H;
+	mEntity.rectOnScreen.x = _point.x*SCALED_W;
+	mEntity.rectOnScreen.y = _point.y*SCALED_H;
 
 }
 

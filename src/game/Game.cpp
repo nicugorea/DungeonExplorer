@@ -23,6 +23,7 @@ void Game::Run()
 	while(mRunning)
 	{
 
+		EventHandle();
 		ResourceManager::Clear();
 		mMap.Draw();
 		mPlayer.Draw();
@@ -30,7 +31,6 @@ void Game::Run()
 
 		ResourceManager::Show();
 
-		EventHandle();
 
 		if(delay < FPS)
 		{

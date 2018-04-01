@@ -2,7 +2,7 @@
 #include "../includes.h"
 #include "BasicObject.h"
 
-class Player
+class Player : public BasicObject
 {
 public:
 	Player();
@@ -14,7 +14,6 @@ public:
 	void Draw();
 
 private:
-	Entity mEntity;
 	double mAngle;
 	SDL_Point mCenter;
 	SDL_RendererFlip mFlip=SDL_FLIP_NONE;

@@ -9,9 +9,9 @@ src\core\InputManager.cpp(27): warning C4800: 'const Uint8': forcing value to bo
   main.cpp
   Generating code
 c:\users\mariansa\desktop\c++\dungeonexplorer\src\game\game.cpp(35): warning C4700: uninitialized local variable 'delay' used
+  Finished generating code
   1 of 173 functions ( 0.6%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
-  Finished generating code
+    2 functions had inline decision re-evaluated but remain unchanged
   DungeonExplorer.vcxproj -> C:\Users\Mariansa\Desktop\c++\DungeonExplorer\Release\DungeonExplorer.exe
   DungeonExplorer.vcxproj -> C:\Users\Mariansa\Desktop\c++\DungeonExplorer\Release\DungeonExplorer.pdb (Full PDB)

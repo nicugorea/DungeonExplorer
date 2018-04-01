@@ -73,21 +73,21 @@ void GameMap::Draw()
 	{
 		for(int j = 0; j < mSize.x; j++)
 		{
-			mCell.SetPosition( { j*STD_W, i*STD_H } );
+			mCell.SetPosition( { j*SCALED_W, i*SCALED_H } );
 			mCell.Draw();
 			if(mMap[i][j] == 1)
 			{
-				mWall.SetPosition( { j*STD_W, i*STD_H } );
+				mWall.SetPosition( { j*SCALED_W, i*SCALED_H } );
 				mWall.Draw();
 			}
 			if(mMap[i][j] == -1)
 			{
-				mTreasure.SetPosition( { j*STD_W, i*STD_H } );
+				mTreasure.SetPosition( { j*SCALED_W, i*SCALED_H } );
 				mTreasure.Draw();
 			}
 			if(mMap[i][j] == -2)
 			{
-				mMonster.SetPosition( { j*STD_W, i*STD_H } );
+				mMonster.SetPosition( { j*SCALED_W, i*SCALED_H } );
 				mMonster.Draw();
 			}
 		}
