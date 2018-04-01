@@ -13,9 +13,10 @@ Game::~Game()
 
 void Game::Run()
 {
-	mMap.LoadFromFile( "res/map/map.txt" );
 	mRunning = true;
+	mMap.LoadFromFile( "res/map/map.txt" );
 	mPlayer.SetPosition( mMap.GetPlayerPosition() );
+	mPlayer.SetMapSize( mMap.GetMapSize() );
 
 	Uint32 lastFrame = SDL_GetTicks();
 	int delay;

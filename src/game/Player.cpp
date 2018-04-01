@@ -19,20 +19,25 @@ Player::~Player()
 void Player::EventHandle()
 {
 	bool moved = true;
+	bool rotated = true;
 
 	if(InputManager::IsKeyDown( SDL_SCANCODE_RIGHT ))
 		mAngle += 90;
 	else if(InputManager::IsKeyDown( SDL_SCANCODE_LEFT ))
 		mAngle -= 90;
-	else if(InputManager::IsKeyDown( SDL_SCANCODE_UP ))
+	else rotated = false;
+
+	if(InputManager::IsKeyDown( SDL_SCANCODE_UP ))
 	{
-		if(mAngle == 0)
+		//LOGLN( "POS: " << mEntity.rectOnScreen.x << " " << mEntity.rectOnScreen.y );
+		//LOGLN( "POS: " << mMapSize.x*SCALED_W << " " << mMapSize.y*SCALED_H );
+		if(mAngle == 0 && mEntity.rectOnScreen.y>0)
 			mEntity.rectOnScreen.y -= SCALED_H;
-		else if(mAngle == 90 || mAngle == -270)
+		else if((mAngle == 90 || mAngle == -270) && mEntity.rectOnScreen.x  <mMapSize.x*SCALED_W - SCALED_W)
 			mEntity.rectOnScreen.x += SCALED_H;
-		else if(mAngle == 180 || mAngle == -180)
+		else if((mAngle == 180 || mAngle == -180) && mEntity.rectOnScreen.y<mMapSize.y*SCALED_H - SCALED_H)
 			mEntity.rectOnScreen.y += SCALED_W;
-		else if(mAngle == 270 || mAngle == -90)
+		else if((mAngle == 270 || mAngle == -90) && mEntity.rectOnScreen.x>0)
 			mEntity.rectOnScreen.x -= SCALED_W;
 	}
 	else moved = false;
@@ -40,7 +45,7 @@ void Player::EventHandle()
 	if(mAngle == 360) mAngle =0;
 	if(mAngle == -360) mAngle =0;
 
-	if(moved) SDL_Delay( SPEED );
+	if(moved || rotated) SDL_Delay( SPEED );
 }
 
 void Player::SetPosition( SDL_Point _point )

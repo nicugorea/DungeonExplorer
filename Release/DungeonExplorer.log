@@ -1,17 +1,9 @@
-﻿  InputManager.cpp
-src\core\InputManager.cpp(27): warning C4800: 'const Uint8': forcing value to bool 'true' or 'false' (performance warning)
-  ResourceManager.cpp
-  Window.cpp
-  BasicObject.cpp
-  Game.cpp
-  GameMap.cpp
-  Player.cpp
-  main.cpp
+﻿  Player.cpp
   Generating code
-c:\users\mariansa\desktop\c++\dungeonexplorer\src\game\game.cpp(35): warning C4700: uninitialized local variable 'delay' used
+c:\users\mariansa\desktop\c++\dungeonexplorer\src\game\game.cpp(36): warning C4700: uninitialized local variable 'delay' used
+  3 of 175 functions ( 1.7%) were compiled, the rest were copied from previous compilation.
   Finished generating code
-  1 of 173 functions ( 0.6%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    2 functions had inline decision re-evaluated but remain unchanged
+    1 functions had inline decision re-evaluated but remain unchanged
   DungeonExplorer.vcxproj -> C:\Users\Mariansa\Desktop\c++\DungeonExplorer\Release\DungeonExplorer.exe
   DungeonExplorer.vcxproj -> C:\Users\Mariansa\Desktop\c++\DungeonExplorer\Release\DungeonExplorer.pdb (Full PDB)
