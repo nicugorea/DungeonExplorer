@@ -6,11 +6,11 @@
 
 *Map drawing with images
 
-## To do:
-
 *Player rotation and movement+shot
 
 *Score
+
+## To do:
 
 *Game Reset
 
